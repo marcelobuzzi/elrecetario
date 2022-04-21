@@ -1,0 +1,372 @@
+:root {
+
+  /* En uso */
+  --color-normal   : 253, 126, 20;
+  --color-hover    : 230, 113, 18;
+  --color-focus    : 218, 108, 17;
+
+  --blue-normal    : 13, 110, 253;
+  --blue-hover     : 11, 94, 215;
+  --blue-focus     : 49, 132, 253;
+
+  --red-normal     : 220, 53, 69;
+  --red-hover      : 187, 45, 59;
+  --red-focus      : 255, 83, 97;
+
+  --yellow-normal  : 255, 193, 7;
+  --yellow-hover   : 255, 202, 44;
+  --yellow-focus   : 217, 164, 6;
+
+  --orange-normal  : 253, 126, 20;
+  --orange-hover   : 230, 113, 18;
+  --orange-focus   : 218, 108, 17;
+
+  --green-normal   : 25, 135, 84;
+  --green-hover    : 21, 115, 71;
+  --green-focus    : 17, 153, 110;
+
+  --indigo         : 102, 16, 242;
+  --purple         : 111, 66, 193;
+  --pink           : 214, 51, 132;
+  --teal           : 32, 201, 151;
+  --cyan           : 13, 202, 240;
+  --white          : 255, 255, 255;
+  --light          : 248, 249, 250;
+  --black          : 0, 0, 0;
+  --gray-01        : 248, 249, 250;
+  --gray-02        : 233, 236, 239;
+  --gray-03        : 222, 226, 230;
+  --gray-04        : 206, 212, 218;
+  --gray-05        : 173, 181, 189;
+  --gray-06        : 108, 117, 125;
+  --gray-07        : 73, 80, 87;
+  --gray-08        : 52, 58, 64;
+  --gray-09        : 33, 37, 41;
+
+  --facebook       : 60, 90, 153;
+  --twitter        : 29, 171, 221;
+  --instagram      : 224, 57, 101;
+}
+
+* {
+  margin     : 0px;
+  padding    : 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#bg-video {
+  position  : fixed;
+  right     : 0;
+  bottom    : 0;
+  min-width : 100%;
+  min-height: 100%;
+  z-index   : -100;
+}
+
+header {
+  display      : flex;
+  width        : 100%;
+  height       : 60px;
+  flex-wrap    : nowrap;
+  flex-grow    : 1;
+  background   :linear-gradient(rgba(var(--black), 0.8), rgba(var(--gray-07), 0.8));
+  border-bottom: 5px solid rgba(var(--color-normal), 0.8);
+}
+
+header > a{
+  color          : rgba(var(--white), 1);
+  text-decoration: none;
+  font-size      : 30px;
+  padding        : 5px;
+  font-family    : 'Pacifico', cursive;
+}
+
+header > img {
+  margin-top: 10px;
+}
+
+.content {
+  min-height: 500px;
+}
+
+.navbar {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+}
+
+footer {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows   : repeat(2, auto);
+  gap                  : 10px;
+  grid-template-areas  :
+    "col1 col2 col3"
+    "row  row  row";
+  padding              : 20px;
+  column-gap           : 10px;
+  background           : linear-gradient(rgba(var(--gray-07), 0.8), rgba(var(--black), 0.8));
+  border-top           : 5px solid rgba(var(--color-normal), 0.8);
+}
+
+.col1 {
+  justify-content: center;
+  grid-area      : col1;
+}
+
+.col2 {
+  justify-content: center;
+  grid-area      : col2;
+}
+
+.col3 {
+  justify-content: center;
+  grid-area      : col3;
+}
+
+.row2 {
+  margin-top: 10px;
+  display        : flex;
+  justify-content: center;
+  grid-area      : row;
+  padding-top    : 15px;
+  border-top     : 1px solid rgba(var(--color-normal), 0.8);
+}
+
+.footer-item {
+  text-align: center;
+  color: rgba(var(--white), 1);
+}
+
+.texto-izquierda {
+  text-align: left;
+}
+
+.anchor-list-inline {
+  display        : flex;
+  justify-content: center;
+}
+
+.anchor-list-inline > a {
+  margin: 6px;
+}
+
+.anchor-list-inline > a {
+  text-decoration: none;
+  color          : rgba(var(--white), 1);
+}
+
+.form {
+  width : 50%;
+  margin: auto;
+}
+
+.group {
+  margin: 10px 0px 10px 0px;
+}
+
+.group > .label {
+  border: 1px solid rgba(var(--color-normal), 1);
+}
+
+.group > .input, .group > .textarea {
+  margin: 0px 0px 10px 0px;
+  resize: none;
+}
+
+.group > .input:focus {
+  border    : 1px solid rgba(var(--color-normal), 1);
+  border-top: 0px;
+}
+
+.label {
+  display         : flex;
+  width           : 95%;
+  padding         : 0.375rem 0.75rem;
+  font-size       : 1rem;
+  font-weight     : 400;
+  color           : rgba(var(--white), 1);
+  white-space     : nowrap;
+  background-color: rgba(var(--color-normal), 1);
+  border          : 1px solid #ced4da;
+}
+
+.input, .textarea {
+  display         : block;
+  margin          : 10px 0px 10px 0px;
+  width           : 95%;
+  padding         : 0.375rem 0.75rem;
+  font-size       : 1rem;
+  font-weight     : 400;
+  line-height     : 1.5;
+  color           : rgba(var(--gray-09), 1);
+  background-color: rgba(var(--white), 1);
+  border          : 1px solid rgba(var(--gray-04), 1);
+  transition      : border-color 0.15s ease-in-out;
+}
+
+.input:focus, .textarea:focus {
+  color           : rgba(var(--gray-09), 1);
+  background-color: rgba(var(--white), 1);
+  border-color    : rgba(var(--color-normal), 1);
+  outline         : 0;
+}
+
+.button {
+  display            : block;
+  margin             : 10px 0px 10px 0px;
+  font-weight        : 400;
+  line-height        : 1.5;
+  color              : rgba(var(--white), 1);
+  background-color   : rgba(var(--color-normal), 1);
+  text-align         : center;
+  text-decoration    : none;
+  vertical-align     : middle;
+  cursor             : pointer;
+  -webkit-user-select: none;
+  -moz-user-select   : none;
+  user-select        : none;
+  border             : 1px solid rgba(var(--color-normal), 1);
+  padding            : 0.375rem 0.75rem;
+  font-size          : 1rem;
+  box-shadow         : none;
+  outline: 0;
+}
+
+.button:hover {
+  background-color: rgba(var(--color-hover), 1);
+  border-color    : rgba(var(--color-hover), 1);
+  transition      :
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--color-focus), 0.5);
+  transition:
+    box-shadow 0.15s ease-in-out;
+}
+
+.button-disabled {
+  cursor          : default;
+  color           : rgba(var(--white), 1);
+  background-color: rgba(var(--gray-06), 1);
+  border          : 1px solid rgba(var(--gray-06), 1);
+}
+
+.button-disabled:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--color-focus), 0);
+}
+
+.button-disabled:hover {
+  background-color: rgba(var(--gray-06), 1);
+  border          : 1px solid rgba(var(--gray-06), 1);
+}
+
+.menu-item {
+  border-left: 1px solid rgba(157, 77, 12, 1);
+  border-right: 1px solid rgba(255, 190, 78, 1);
+}
+
+.fa-facebook-square:hover {
+  color: rgba(var(--facebook), 1);
+}
+
+.fa-twitter-square:hover {
+  color: rgba(var(--twitter), 1);
+}
+
+.fa-instagram-square:hover {
+  color: rgba(var(--instagram), 1);
+}
+
+.content-tarjetas {
+  margin         : auto;
+  width          : 95%;
+  padding        : 20px;
+  display        : flex;
+  flex-wrap      : wrap;
+  flex-direction : row;
+  justify-content: space-between;
+}
+
+.tarjeta {
+  width                : 600px;
+  display              : grid;
+  padding              : 10px;
+  margin               : auto;
+  margin-top           : 10px;
+  margin-bottom        : 10px;
+  background-color     : rgba(var(--white), 0.8);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows   : 1fr 0.5fr;
+  gap                  : 10px;
+  grid-template-areas  :
+    "imagen titulo titulo"
+    "imagen   .    btn-receta";
+}
+
+.tarjeta:hover {
+  transition: box-shadow 0.15s ease-in-out;
+  box-shadow: 0px 5px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.imagen {
+  margin   : auto;
+  grid-area: imagen;
+}
+
+.titulo {
+  grid-area: titulo;
+}
+
+.titulo > h3 {
+  color: rgba(var(--color-normal), 1);
+  border-bottom: 1px solid rgba(var(--gray-07), 0.8);
+}
+
+.btn-receta {
+  grid-area: btn-receta;
+}
+
+.tarjeta > .imagen > img {
+  width: 100%;
+  max-height: 180px;
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .tarjeta {
+    width                : 250px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows   : repeat(3, auto);
+    grid-template-areas  :
+      "imagen imagen"
+      "titulo titulo"
+      "btn-receta btn-receta";
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows   : repeat(3, auto);
+    grid-template-areas  :
+      "col1 col3"
+      "col2 col2"
+      "row  row";
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows   : repeat(4, auto);
+    grid-template-areas  :
+      "col1"
+      "col3"
+      "col2"
+      "row ";
+  }
+}
