@@ -44,69 +44,29 @@
     </section>
 
     <div class="content">
-      <div class="content-tarjetas">
+      <form class="form" action="" method="post" onsubmit="validarCampos(event, this)">
 
-        <div class="tarjeta">
-          <div class="tarjeta-imagen">
-            <img src="img/chipa.png" alt="">
-          </div>
-          <div class="tarjeta-titulo">
-            <h3>Chipa</h3>
-          </div>
-          <div class="tarjeta-texto">
-            La receta casera de chipá es una opción salada ideal para el desayuno y la merienda. Paso a paso para hacer en casa y acompañar con mate.
-          </div>
-          <div class="button-tarjeta">
-            <button class="button" type="button" name="button"><i class="fa-regular fa-eye"></i></button>
-          </div>
+        <div class="group">
+          <label class="label" for="nombre">Nombre</label>
+          <input class="input" id="nombre" type="text" name="nombre" value="">
+          <div class="error" data-error="nombre"></div>
         </div>
 
-        <div class="tarjeta">
-          <div class="tarjeta-imagen">
-            <img src="img/masa_pizza.png" alt="">
-          </div>
-          <div class="tarjeta-titulo">
-            <h3>Masa de pizza</h3>
-          </div>
-          <div class="tarjeta-texto">
-            Masa de pizza casera y al estilo italiano. Preparar masa de pizza es fácil y bastante divertido. Lo mejor para una noche de películas con amigos.
-          </div>
-          <div class="button-tarjeta">
-            <button class="button button-disabled" type="button" name="button"><i class="fa-regular fa-eye"></i></button>
-          </div>
+        <div class="group">
+          <label class="label" for="email">Email</label>
+          <input class="input" id="email" type="text" name="email" value="">
+          <div class="error" data-error="email"></div>
         </div>
 
-        <div class="tarjeta">
-          <div class="tarjeta-imagen">
-            <img src="img/salsa_pizza.png" alt="">
-          </div>
-          <div class="tarjeta-titulo">
-            <h3>Sala para pizza</h3>
-          </div>
-          <div class="tarjeta-texto">
-            La salsa para la pizza es la clave para que la pizza resulte espectacular. Podes hacer una masa casera increíble, pero una buena salsa hace la diferencia.
-          </div>
-          <div class="button-tarjeta">
-            <button class="button button-disabled" type="button" name="button"><i class="fa-regular fa-eye"></i></button>
-          </div>
+        <div class="group">
+          <label class="label" for="consulta">Consulta</label>
+          <textarea class="textarea" id="consulta" name="consulta" rows="8" cols="80"></textarea>
+          <div class="error" data-error="consulta"></div>
         </div>
 
-        <div class="tarjeta">
-          <div class="tarjeta-imagen">
-            <img src="img/sopa_paraguaya.png" alt="">
-          </div>
-          <div class="tarjeta-titulo">
-            <h3>Sopa paraguaya</h3>
-          </div>
-          <div class="tarjeta-texto">
-            Una comida típica del norte argentino súper sencilla de hacer y con miles de opciones para disfrutar.
-          </div>
-          <div class="button-tarjeta">
-            <button class="button button-disabled" type="button" name="button"><i class="fa-regular fa-eye"></i></button>
-          </div>
-        </div>
+        <input class="button" type="submit" name="" value="BOTON">
 
-      </div>
+      </form>
     </div>
 
     <footer>

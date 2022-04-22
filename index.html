@@ -19,20 +19,20 @@
   <body>
 
     <header>
-      <img src="img/logo.png" height="40px" alt="">
-      <a href="#">
+      <div class="brand">
+        <img src="img/logo.png" height="40px" alt="">
         El Recetario
-      </a>
+      </div>
       <nav class="navbar">
-        <div class="menu-item button">
+        <a class="menu-item" href="index.html">
           Inicio
-        </div>
-        <div class="menu-item button">
+        </a>
+        <a class="menu-item" href="recetas.html">
           Recetas
-        </div>
-        <div class="menu-item button">
+        </a>
+        <a class="menu-item" href="contacto.html">
           Contacto
-        </div>
+        </a>
       </nav>
     </header>
 
@@ -44,21 +44,23 @@
     </section>
 
     <div class="content">
-      <form class="form" action="index.html" method="post">
-        <div class="group">
-          <label class="label" for="nombre">Nombre</label>
-          <input class="input" id="nombre" type="text" name="nombre" value="" required>
+      <div class="content-tarjetas">
+        <div class="tarjeta-xl">
+          <div class="tarjeta-titulo-xl">
+            <h1>Menú del día</h1>
+          </div>
+          <div class="tarjeta-texto-xl">
+            4 recetas deliciosas y saludables para el día de hoy.
+            Un desayuno completo que dejará satisfecho hasta la proxima comida; un delicioso almuerzo que incluye mucha proteína y fibra con muy pocas calorías; una merienda tranquila a base de frutas para que continues con tu rutina diaria sin sentirte pesado; y para finalizar, un cena muy light para un descanso prolongado y sin pesadez.
+          </div>
+          <div class="tarjeta-imagen-xl">
+            <img src="img/menu.png" alt="">
+          </div>
+          <div class="tarjeta-button-xl">
+            <button class="button button-disabled" type="button" name="button"><i class="fa-regular fa-eye"></i> MENU</button>
+          </div>
         </div>
-        <div class="group">
-          <label class="label" for="email">Email</label>
-          <input class="input" id="email" type="email" name="email" value="" required>
-        </div>
-        <div class="group">
-          <label class="label" for="consulta">Consulta</label>
-          <textarea class="textarea" id="consulta" name="consulta" rows="8" cols="80" required></textarea>
-        </div>
-        <button class="button" type="button" name="button">BOTON</button>
-      </form>
+      </div>
     </div>
 
     <footer>
@@ -99,6 +101,7 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="js/functions.js"></script>
   </body>
 
 </html>
