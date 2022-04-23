@@ -54,6 +54,12 @@
   font-family: 'Ubuntu', sans-serif, 'Caveat', cursive, 'Pacifico', cursive;
 }
 
+[data-decoration="no"] {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
 #bg-video {
   position  : fixed;
   right     : 0;
