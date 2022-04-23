@@ -1,51 +1,51 @@
 :root {
 
   /* En uso */
-  --color-normal   : 253, 126, 20;
-  --color-hover    : 230, 113, 18;
-  --color-focus    : 218, 108, 17;
+  --color-normal : 253, 126, 20;
+  --color-hover  : 230, 113, 18;
+  --color-focus  : 218, 108, 17;
 
-  --blue-normal    : 13, 110, 253;
-  --blue-hover     : 11, 94, 215;
-  --blue-focus     : 49, 132, 253;
+  --blue-normal  : 13, 110, 253;
+  --blue-hover   : 11, 94, 215;
+  --blue-focus   : 49, 132, 253;
 
-  --red-normal     : 220, 53, 69;
-  --red-hover      : 187, 45, 59;
-  --red-focus      : 255, 83, 97;
+  --red-normal   : 220, 53, 69;
+  --red-hover    : 187, 45, 59;
+  --red-focus    : 255, 83, 97;
 
-  --yellow-normal  : 255, 193, 7;
-  --yellow-hover   : 255, 202, 44;
-  --yellow-focus   : 217, 164, 6;
+  --yellow-normal: 255, 193, 7;
+  --yellow-hover : 255, 202, 44;
+  --yellow-focus : 217, 164, 6;
 
-  --orange-normal  : 253, 126, 20;
-  --orange-hover   : 230, 113, 18;
-  --orange-focus   : 218, 108, 17;
+  --orange-normal: 253, 126, 20;
+  --orange-hover : 230, 113, 18;
+  --orange-focus : 218, 108, 17;
 
-  --green-normal   : 25, 135, 84;
-  --green-hover    : 21, 115, 71;
-  --green-focus    : 17, 153, 110;
+  --green-normal : 25, 135, 84;
+  --green-hover  : 21, 115, 71;
+  --green-focus  : 17, 153, 110;
 
-  --indigo         : 102, 16, 242;
-  --purple         : 111, 66, 193;
-  --pink           : 214, 51, 132;
-  --teal           : 32, 201, 151;
-  --cyan           : 13, 202, 240;
-  --white          : 255, 255, 255;
-  --light          : 248, 249, 250;
-  --black          : 0, 0, 0;
-  --gray-01        : 248, 249, 250;
-  --gray-02        : 233, 236, 239;
-  --gray-03        : 222, 226, 230;
-  --gray-04        : 206, 212, 218;
-  --gray-05        : 173, 181, 189;
-  --gray-06        : 108, 117, 125;
-  --gray-07        : 73, 80, 87;
-  --gray-08        : 52, 58, 64;
-  --gray-09        : 33, 37, 41;
+  --indigo       : 102, 16, 242;
+  --purple       : 111, 66, 193;
+  --pink         : 214, 51, 132;
+  --teal         : 32, 201, 151;
+  --cyan         : 13, 202, 240;
+  --white        : 255, 255, 255;
+  --light        : 248, 249, 250;
+  --black        : 0, 0, 0;
+  --gray-01      : 248, 249, 250;
+  --gray-02      : 233, 236, 239;
+  --gray-03      : 222, 226, 230;
+  --gray-04      : 206, 212, 218;
+  --gray-05      : 173, 181, 189;
+  --gray-06      : 108, 117, 125;
+  --gray-07      : 73, 80, 87;
+  --gray-08      : 52, 58, 64;
+  --gray-09      : 33, 37, 41;
 
-  --facebook       : 60, 90, 153;
-  --twitter        : 29, 171, 221;
-  --instagram      : 224, 57, 101;
+  --facebook     : 60, 90, 153;
+  --twitter      : 29, 171, 221;
+  --instagram    : 224, 57, 101;
 }
 
 * {
@@ -63,14 +63,26 @@
   z-index   : -100;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows   : repeat(3, auto);
+  grid-template-areas  :
+    "header  header"
+    "content aside"
+    "footer  footer";
+}
+
 /* Header & Navbar ----------------------------------------------------------------- */
 header {
+  grid-area        : header;
   display          : flex;
   align-items      : center;
   column-gap       : 10px;
   height           : 60px;
   padding          : 5px;
   color            : rgba(var(--white), 1);
+  /* background-image : linear-gradient(rgba(var(--black), 0.8), rgba(var(--gray-07), 0.8)); */
   background-image : url('../img/background.png'), linear-gradient(rgba(var(--black), 0.8), rgba(var(--gray-07), 0.8));
   background-size  : auto, cover;
   background-repeat: repeat, no-repeat;
@@ -111,13 +123,22 @@ header {
   color: rgba(var(--color-normal), 1);
 }
 
+/* Content ------------------------------------------------------------------------- */
 .content {
+  grid-area : content;
   min-height: 500px;
 }
 
+/* aside --------------------------------------------------------------------------- */
+aside {
+  grid-area : aside;
+  min-height: 500px;
+  padding: 10px;
+}
 
 /* Footer -------------------------------------------------------------------------- */
 footer {
+  grid-area            : footer;
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows   : repeat(2, auto);
@@ -127,6 +148,7 @@ footer {
     "row  row  row";
   padding              : 20px;
   column-gap           : 10px;
+  /* background-image     : linear-gradient(rgba(var(--gray-07), 0.8), rgba(var(--black), 0.8)); */
   background-image     : url('../img/background.png'), linear-gradient(rgba(var(--gray-07), 0.8), rgba(var(--black), 0.8));
   background-size      : auto, cover;
   background-repeat    : repeat, no-repeat;
@@ -225,9 +247,9 @@ footer {
   font-weight     : 400;
   line-height     : 1.5;
   color           : rgba(var(--gray-09), 1);
-  background-image     : url('../img/background.png');
+  /* background-image     : url('../img/background.png');
   background-size      : auto;
-  background-repeat    : repeat;
+  background-repeat    : repeat; */
   border          : 1px solid rgba(var(--gray-04), 1);
   transition      : border-color 0.15s ease-in-out;
 }
@@ -314,84 +336,55 @@ footer {
 }
 
 /* Tarjetas ------------------------------------------------------------------------ */
-.content-tarjetas {
-  margin         : auto;
-  width          : 95%;
-  padding        : 20px;
+.tarjeta-content {
   display        : flex;
   flex-wrap      : wrap;
   flex-direction : row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap            : 10px;
+  padding        : 20px 10px 20px 10px;
 }
 
-/* Tarjetas XL ------------------------------------------------- */
-.tarjeta-xl {
-  width                : 90%;
-  display              : grid;
-  padding              : 10px;
-  margin               : auto;
-  margin-top           : 10px;
-  margin-bottom        : 10px;
-  background-color     : rgba(var(--white), 0.8);
-  background-image     : url('../img/background.png');
-  background-size      : auto;
-  background-repeat    : repeat;
-  grid-template-columns: 2fr 4fr;
-  grid-template-rows   : 1fr 6fr 1fr;
-  gap                  : 10px;
-  grid-template-areas  :
-    "titulo-xl imagen-xl"
-    "texto-xl  imagen-xl"
-    "button-xl imagen-xl";
-}
-
-.tarjeta-xl > .tarjeta-imagen-xl {
-  display: flex;
-  justify-content: flex-end;
-  grid-area: imagen-xl;
-}
-
-.tarjeta-xl > .tarjeta-imagen-xl > img {
-  width: 100%;
-}
-
-.tarjeta-xl > .tarjeta-titulo-xl {
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  grid-area      : titulo-xl;
-  color          : rgba(var(--color-normal), 1);
-}
-
-.tarjeta-xl > .tarjeta-texto-xl {
-  grid-area: texto-xl;
-}
-
-.tarjeta-xl > .tarjeta-button-xl {
-  display        : flex;
-  justify-content: flex-end;
-  grid-area      : button-xl;
-}
-
-/* Tarjetas normales ------------------------------------------- */
 .tarjeta {
-  width                : 600px;
-  display              : grid;
-  padding              : 10px;
-  margin               : auto;
-  margin-top           : 10px;
-  margin-bottom        : 10px;
-  background-image     : url('../img/background.png');
-  background-size      : auto;
-  background-repeat    : repeat;
-  background-color     : rgba(var(--white), 0.8);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows   : 0.5fr 1fr 0.5fr;
-  gap                  : 10px;
+  display          : grid;
+  padding          : 10px;
+  background-color : rgba(var(--white), 0.8);
+  background-image : url('../img/background.png');
+  background-size  : auto;
+  background-repeat: repeat;
+  gap              : 10px;
+  text-decoration  : none;
+  color            : black;
+}
+
+.tarjeta-xl {
+  max-width            : 860px;
+  max-height           : 350px;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows   : 1fr 3fr;
+  grid-template-areas  :
+    "titulo imagen"
+    "texto  imagen";
+}
+
+.tarjeta-md {
+  max-width            : 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows   : 0.5fr 2fr;
   grid-template-areas  :
     "imagen titulo"
-    "imagen texto "
-    "imagen button";
+    "imagen texto ";
+}
+
+.tarjeta-xs {
+  padding              : 0px;
+  width                : 160px;
+  height               : 230px;
+  grid-template-columns: 1fr;
+  grid-template-rows   : 1fr 2fr;
+  grid-template-areas  :
+    "imagen"
+    "texto";
 }
 
 .tarjeta:hover {
@@ -399,48 +392,95 @@ footer {
   box-shadow: 0px 5px 7px 2px rgba(0, 0, 0, 0.3);
 }
 
-.tarjeta > .tarjeta-imagen {
+.tarjeta-imagen {
   display        : flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   grid-area      : imagen;
 }
 
-.tarjeta > .tarjeta-imagen > img {
-  width     : 100%;
-  max-height: 180px;
+.tarjeta-imagen > img {
+  width: 100%;
 }
 
 .tarjeta-titulo {
-  display      : flex;
-  align-items  : center;
-  grid-area    : titulo;
-  color        : rgba(var(--color-normal), 1);
+  display        : flex;
+  align-items    : center;
+  grid-area      : titulo;
+  color          : rgba(var(--color-normal), 1);
+}
+
+.tarjeta-titulo-xl {
+  justify-content: center;
+}
+
+.tarjeta-titulo-md {
+  justify-content: flex-start;
 }
 
 .tarjeta-texto {
   grid-area: texto;
 }
 
-.button-tarjeta {
-  display        : flex;
-  justify-content: flex-end;
-  grid-area      : button;
+.tarjeta-texto-xs {
+  padding: 0px 10px 0px 10px;
+}
+
+.tarjeta-puntuacion {
+  grid-area: punto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  transform: translateX(10px) translateY(15px);
+  color: white;
+  background-color: rgba(var(--color-normal), 1);
+}
+
+.aside-titulo {
+  display: flex;
+  color: white;
+  background-color: rgba(var(--color-normal), 1);
+  margin: 10px 5px 10px 5px;
+  padding: 5px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 992px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows   : repeat(4, auto);
+    grid-template-areas  :
+      "header"
+      "content"
+      "aside"
+      "footer";
+  }
+
+  .tarjeta-xl {
+    max-width            : 700px;
+    max-height           : none;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows   : repeat(3, auto);
+    grid-template-areas  :
+      "imagen"
+      "titulo"
+      "texto";
+  }
 
 }
 
 @media screen and (max-width: 768px) {
-  .tarjeta {
+  .tarjeta-md {
     width                : 250px;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows   : repeat(4, auto);
+    grid-template-rows   : repeat(3, auto);
     grid-template-areas  :
       "imagen"
       "titulo"
-      "texto"
-      "button";
+      "texto";
   }
 
   footer {

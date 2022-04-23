@@ -15,4 +15,4 @@ Consigna
 <br>
 <p>Además de los aspectos técnicos ya mencionados, el proyecto deberá contemplar aspectos de diseño los cuales serán evaluados por el Docente. Para eso se recomienda que vean el material disponible en el Aula Virtual. Seminario de Diseño Web: https://youtu.be/fVkGt2tYIj0. Para más información, ver material incluído en el Aula Virtual Metodologías y Herramientas I - Diseño.</p>
 
-DEMO: <a href = "https://el-recetario.netlify.app/">El Recetario</a>
+DEMO: <a href = "https://el-recetario.netlify.app/" target = "_blank">El Recetario</a>
