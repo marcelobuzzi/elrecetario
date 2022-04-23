@@ -51,7 +51,7 @@
 * {
   margin     : 0px;
   padding    : 0px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif, 'Caveat', cursive, 'Pacifico', cursive;
 }
 
 #bg-video {
@@ -64,7 +64,8 @@
 }
 
 body {
-  display: grid;
+  background-color     : white;
+  display              : grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows   : repeat(3, auto);
   grid-template-areas  :
@@ -136,6 +137,15 @@ aside {
   padding: 10px;
 }
 
+.aside-titulo {
+  display: flex;
+  color: white;
+  background-color: rgba(var(--color-normal), 1);
+  margin: 10px 5px 10px 5px;
+  padding: 5px;
+  justify-content: center;
+}
+
 /* Footer -------------------------------------------------------------------------- */
 footer {
   grid-area            : footer;
@@ -204,12 +214,17 @@ footer {
 
 /* Form & Input -------------------------------------------------------------------- */
 .form {
-  width : 50%;
-  margin: auto;
+  width  : 50%;
+  margin : 20px auto 20px auto;
+  padding: 20px;
+  background-image     : url('../img/background.png');
+  background-size      : auto;
+  background-repeat    : repeat;
+  border          : 1px solid rgba(var(--gray-04), 1);
 }
 
 .group {
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .group > .label {
@@ -247,9 +262,6 @@ footer {
   font-weight     : 400;
   line-height     : 1.5;
   color           : rgba(var(--gray-09), 1);
-  /* background-image     : url('../img/background.png');
-  background-size      : auto;
-  background-repeat    : repeat; */
   border          : 1px solid rgba(var(--gray-04), 1);
   transition      : border-color 0.15s ease-in-out;
 }
@@ -355,6 +367,7 @@ footer {
   gap              : 10px;
   text-decoration  : none;
   color            : black;
+  border: 1px solid rgba(var(--gray-04), 1);
 }
 
 .tarjeta-xl {
@@ -439,15 +452,79 @@ footer {
   background-color: rgba(var(--color-normal), 1);
 }
 
-.aside-titulo {
-  display: flex;
-  color: white;
-  background-color: rgba(var(--color-normal), 1);
-  margin: 10px 5px 10px 5px;
-  padding: 5px;
-  justify-content: center;
+/* Receta -------------------------------------------------------------------------- */
+.receta-content {
+  display              : grid;
+  grid-template-rows   : repeat(5, auto);
+  gap                  : 10px;
+  grid-template-areas  :
+    "imagen"
+    "video"
+    "titulo"
+    "ingredientes"
+    "preparacion";
+  padding              : 10px;
+  column-gap           : 10px;
+
 }
 
+.receta-titulo {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  grid-area: titulo;
+}
+
+.receta-titulo > span {
+  padding: 10px 60px 10px 60px;
+  color: white;
+  background-color: rgba(var(--color-normal), 1);
+}
+
+.receta-imagen-content {
+  display: flex;
+  justify-content: center;
+  grid-area: imagen;
+  overflow: hidden;
+}
+
+.receta-imagen-content > .receta-imagen {
+  width: 90%;
+  display: block;
+  overflow: hidden;
+}
+
+.receta-imagen-content > .receta-imagen > img {
+  width: 100%;
+  bottom: 0px;
+}
+
+.receta-imagen-content > .receta-imagen > .receta-imagen-epigrafe {
+  height          : 50px;
+  color           : white;
+  bottom          : 0px;
+  padding         : 10px;
+  transform       : translateY(-73px);
+  background-image: linear-gradient(rgba(var(--gray-07), 0.7), rgba(var(--black), 0.7));
+  font-family: Caveat;
+  font-size: 21px;
+}
+
+.receta-video {
+  display: flex;
+  justify-content: center;
+  grid-area: video;
+}
+
+.receta-ingredientes {
+  grid-area: ingredientes;
+}
+
+.receta-preparacion {
+  grid-area: preparacion;
+}
+
+/* Media Queries -------------------------------------------------------------------- */
 @media screen and (max-width: 992px) {
   body {
     grid-template-columns: 1fr;
