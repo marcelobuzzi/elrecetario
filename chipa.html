@@ -11,7 +11,7 @@
     <link rel="icon"       type="image/png" href="img/logo.png" sizes="16x16 32x32">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"  type="text/css"  href="https://fonts.googleapis.com/css2?family=Caveat&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
     <link rel="stylesheet"  type="text/css"  href="css/all.min.css">
     <link rel="stylesheet"  type="text/css"  href="css/style.css">
@@ -38,6 +38,13 @@
       </nav>
     </header>
 
+    <section>
+      <video autoplay muted loop id="bg-video">
+        <source src="vid/pexels-cristian-rojas-7613411.mp4" type="video/mp4">
+        <source src="vid/pexels-polina-kovaleva-5645037.mp4" type="video/mp4">
+      </video>
+    </section>
+
     <div class="content">
       <div class="receta-content">
         <div class="receta-imagen-content">
@@ -51,49 +58,53 @@
         <div class="receta-video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/SqOX06vEoos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="receta-titulo">
-          <span>
-            CHIPA
-          </span>
-        </div>
-        <div class="receta-ingredientes">
-          <ul>
-            <li>1kg fécula de mandioca</li>
-            <li>700gr de Queso (Pategras, Holanda o Danbo)</li>
-            <li>200gr de manteca</li>
-            <li>3 huevos</li>
-            <li>Leche</li>
-            <li>Sal</li>
-          </ul>
-        </div>
-        <div class="receta-preparacion">
-          <p>
-            Rallar el queso en un bowl.
-          </p>
-          <p>
-            Colocar la fécula de mandioca en el bowl junto con 2 o 3 cucharadas de sal (la cantidad de sal es a gusto, pero esa cantidad suele ser más que suficiente, si el queso es Danbo que contiene menos sal 3 cucharadas van a estar bien), y mezclar.
-          </p>
-          <p>
-            Derretir la manteca, hasta que quede en punto pomada (eso facilita mucho el amazado, si calienta de más y queda líquida tampoco pasa nada).
-          </p>
-          <p>
-            Agregar los huevos a la mezcla y empezar a amazar.
-          </p>
-          <p>
-            Mientras se amaza se va agregando leche (preferentemente a temperatura ambiente) muy de a poco para no pasarnos de leche. Si nos pasamos de leche el sabor del chipa no cambia, pero no va a mantener la forma típica del bollito en el horno.
-          </p>
-          <p>
-            La consistencia de la maza es relativamente dura (como si fuese arcilla), si es muy fácil de amazar es porque pusimos leche de más.
-          </p>
-          <p>
-            Encender el horno a 180° aprox y dejarlo calentar.
-          </p>
-          <p>
-            Una vez que se obtiene una maza homogénea, se hacen bollitos que se colocan en un placa enmantecada o rociada con aceite.
-          </p>
-          <p>
-            Cuando el horno está caliente se coloca la placa y se deja cocinar de 35 a 40 minutos, o hasta que se vea que se empieza a dorar (mientras tanto preparar el mate y llamar a tu novia/o).
-          </p>
+        <div class="container-receta-texto">
+          <div class="receta-titulo">
+            <span>
+              CHIPA
+            </span>
+          </div>
+          <br>
+          <div class="receta-ingredientes">
+            <ul>
+              <li>1kg fécula de mandioca</li>
+              <li>700gr de Queso (Pategras, Holanda o Danbo)</li>
+              <li>200gr de manteca</li>
+              <li>3 huevos</li>
+              <li>Leche</li>
+              <li>Sal</li>
+            </ul>
+          </div>
+          <br>
+          <div class="receta-preparacion">
+            <p>
+              Rallar el queso en un bowl.
+            </p>
+            <p>
+              Colocar la fécula de mandioca en el bowl junto con 2 o 3 cucharadas de sal (la cantidad de sal es a gusto, pero esa cantidad suele ser más que suficiente, si el queso es Danbo que contiene menos sal 3 cucharadas van a estar bien), y mezclar.
+            </p>
+            <p>
+              Derretir la manteca, hasta que quede en punto pomada (eso facilita mucho el amazado, si calienta de más y queda líquida tampoco pasa nada).
+            </p>
+            <p>
+              Agregar los huevos a la mezcla y empezar a amazar.
+            </p>
+            <p>
+              Mientras se amaza se va agregando leche (preferentemente a temperatura ambiente) muy de a poco para no pasarnos de leche. Si nos pasamos de leche el sabor del chipa no cambia, pero no va a mantener la forma típica del bollito en el horno.
+            </p>
+            <p>
+              La consistencia de la maza es relativamente dura (como si fuese arcilla), si es muy fácil de amazar es porque pusimos leche de más.
+            </p>
+            <p>
+              Encender el horno a 180° aprox y dejarlo calentar.
+            </p>
+            <p>
+              Una vez que se obtiene una maza homogénea, se hacen bollitos que se colocan en un placa enmantecada o rociada con aceite.
+            </p>
+            <p>
+              Cuando el horno está caliente se coloca la placa y se deja cocinar de 35 a 40 minutos, o hasta que se vea que se empieza a dorar (mientras tanto preparar el mate y llamar a tu novia/o).
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -209,7 +220,6 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/functions.js"></script>
   </body>
 
 </html>

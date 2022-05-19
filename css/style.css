@@ -220,13 +220,14 @@ footer {
 
 /* Form & Input -------------------------------------------------------------------- */
 .form {
-  width  : 50%;
-  margin : 20px auto 20px auto;
-  padding: 20px;
-  background-image     : url('../img/background.png');
-  background-size      : auto;
-  background-repeat    : repeat;
-  border          : 1px solid rgba(var(--gray-04), 1);
+  width            : 50%;
+  margin           : 20px auto 20px auto;
+  padding          : 20px;
+  background-color : rgba(var(--white), 0.8);
+  background-image : url('../img/background.png');
+  background-size  : auto;
+  background-repeat: repeat;
+  border           : 1px solid rgba(var(--gray-04), 1);
 }
 
 .group {
@@ -246,6 +247,19 @@ footer {
   border    : 1px solid rgba(var(--color-normal), 1);
   border-top: 0px;
 }
+
+.group > .bg-normal {
+  background: rgba(var(--white), 1);
+}
+
+.group > .bg-alert {
+  color     : #ffffff !important;
+  background: #ff7575;
+}
+
+/* .group > .bg-alert::after {
+  content: "♥";
+} */
 
 .label {
   display         : flex;
@@ -342,6 +356,10 @@ footer {
   color           : rgba(var(--white), 1);
   background-color: rgba(var(--gray-06), 1);
   border          : 1px solid rgba(var(--gray-06), 1);
+}
+
+.button-disabled::after {
+  content: 'Todos los campos son obligatorios.'
 }
 
 .button-disabled:focus {
@@ -474,6 +492,14 @@ footer {
 
 }
 
+.container-receta-texto {
+  margin: 0px;
+  background-color : rgba(var(--white), 0.8);
+  background-image : url('../img/background.png');
+  padding: 20px;
+  width: 100%;
+}
+
 .receta-titulo {
   display: flex;
   justify-content: center;
@@ -524,6 +550,10 @@ footer {
 
 .receta-ingredientes {
   grid-area: ingredientes;
+}
+
+.receta-ingredientes > ul {
+  list-style: none;
 }
 
 .receta-preparacion {
