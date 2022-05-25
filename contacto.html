@@ -45,7 +45,12 @@
     </section>
 
     <div id="app" class="content">
-      <form class="form" action="" method="post">
+
+      <div class="alert" v-if="consultaEnviada">
+        Su consulta fue enviada con éxito. Le contestaremos a la brevedad.
+      </div>
+
+      <form class="form" v-if="!consultaEnviada">
 
         <div class="group">
           <label class="label" for="nombre">Nombre</label>
@@ -65,7 +70,9 @@
           <span><small>{{consultaError}}</small></span>
         </div>
 
-        <input :class="[validar() ? 'button' : 'button button-disabled']" type="submit" name="" value="ENVIAR">
+        <button :class="[validar() ? 'button' : 'button button-disabled']" @click="enviar()" type="button">ENVIAR</button>
+        <br>
+        <span><small>{{generalError}}</small></span>
 
       </form>
     </div>

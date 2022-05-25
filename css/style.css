@@ -230,6 +230,17 @@ footer {
   border           : 1px solid rgba(var(--gray-04), 1);
 }
 
+.alert {
+  width            : 50%;
+  margin           : 20px auto 20px auto;
+  padding          : 20px;
+  background-color : rgba(var(--white), 0.8);
+  background-image : url('../img/background.png');
+  background-size  : auto;
+  background-repeat: repeat;
+  border           : 1px solid rgba(var(--gray-04), 1);
+}
+
 .group {
   margin: 0px 0px 10px 0px;
 }
@@ -356,10 +367,6 @@ footer {
   color           : rgba(var(--white), 1);
   background-color: rgba(var(--gray-06), 1);
   border          : 1px solid rgba(var(--gray-06), 1);
-}
-
-.button-disabled::after {
-  content: 'Todos los campos son obligatorios.'
 }
 
 .button-disabled:focus {

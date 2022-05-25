@@ -7,12 +7,14 @@ const regEx = {
 const app = Vue.createApp({
   data() {
     return {
-      nombre       : '',
-      email        : '',
-      consulta     : '',
-      nombreError  : '',
-      emailError   : '',
-      consultaError: '',
+      nombre         : '',
+      email          : '',
+      consulta       : '',
+      nombreError    : '',
+      emailError     : '',
+      consultaError  : '',
+      generalError   : '',
+      consultaEnviada: false,
     }
   },
   methods: {
@@ -34,24 +36,22 @@ const app = Vue.createApp({
         return true;
       };
     },
-    validarConsulta() {
-      if(this.consulta.trim() == '') {
-        this.consultaError = 'La consulta no puede estar vacía.';
-        return false;
-      } else {
-        this.consultaError = '';
-        return true;
-      };
-    },
     validar() {
-      if(this.nombre.trim() != '' && this.email.trim() != '' && this.validarConsulta()) {
+      if(this.nombre.trim() != '' && this.email.trim() != '' && this.consulta.trim() != '') {
         if(this.validarEmail() && this.validarNombre()) {
+          this.generalError = '';
           return true;
         } else {
           return false;
         }
       } else {
+        this.generalError = 'Todos los campos son obligatorios.';
         return false;
+      }
+    },
+    enviar() {
+      if(this.validar() && !this.consultaEnviada) {
+        this.consultaEnviada = true;
       }
     }
   }
