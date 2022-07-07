@@ -47,6 +47,7 @@ const app = Vue.createApp({
       } else {
         this.generalError = 'Todos los campos son obligatorios.';
         return false;
+        
       }
     },
     enviar() {
